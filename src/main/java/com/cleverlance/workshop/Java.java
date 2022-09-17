@@ -76,5 +76,15 @@ public class Java {
                 });
             }
         });
+
+        Animal animal = Animal.Dinosaur.INSTANCE;
+
+        if (animal instanceof Animal.Dog) {
+            System.out.println("Dog");
+        } else if (animal instanceof Animal.Dinosaur) {
+            System.out.println("Dino");
+        } else {
+            System.out.println("There are no guarantees in Java");
+        }
     }
 }

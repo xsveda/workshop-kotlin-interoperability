@@ -46,3 +46,18 @@ suspend fun anotherMain() {
     doSomethingAsync("2")
     doSomethingAsync("3")
 }
+
+sealed interface Animal {
+    class Dog(val lives: Boolean) : Animal
+    object Dinosaur : Animal
+}
+
+fun animals() {
+    val animal: Animal = Animal.Dinosaur
+
+    when (animal) {
+        is Animal.Dog -> println("Dog ${animal.lives}")
+        is Animal.Dinosaur -> println("Dinosaur")
+        else -> println("There is no else")
+    }
+}
