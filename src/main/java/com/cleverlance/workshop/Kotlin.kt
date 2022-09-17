@@ -1,10 +1,8 @@
+@file:JvmName("Kotlin")
+
 package com.cleverlance.workshop
 
-object Kotlin {
-
-    @JvmStatic
-    fun unitFunction() {
-    }
+fun unitFunction() {
 }
 
 fun main() {
