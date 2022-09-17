@@ -1,11 +1,12 @@
 package com.cleverlance.workshop
 
-class Kotlin {
+object Kotlin {
 
+    @JvmStatic
     fun unitFunction() {
     }
 }
 
 fun main() {
-    Java().voidFunction()
+    Java.voidFunction()
 }
