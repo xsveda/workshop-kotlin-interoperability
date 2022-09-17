@@ -32,6 +32,7 @@ public class Java {
 
     public static void main(String[] args) {
         Kotlin.unitFunction();
+        //Kotlin.nothingFunction();
 
         Kotlin.intFunction(0, 0).longValue();
 

@@ -5,6 +5,11 @@ package com.cleverlance.workshop
 fun unitFunction() {
 }
 
+@Throws(Exception::class)
+fun nothingFunction(): Nothing {
+    throw Exception()
+}
+
 fun intFunction(a: Int, b: Int?): Int? {
     return 0
 }
