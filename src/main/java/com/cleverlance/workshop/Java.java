@@ -19,6 +19,15 @@ public class Java {
         return new ArrayList<>();
     }
 
+    String field = "";
+
+    String getProperty() {
+        return "";
+    }
+
+    void setProperty(String value) {
+    }
+
     public static void main(String[] args) {
         Kotlin.unitFunction();
 
@@ -26,5 +35,9 @@ public class Java {
 
         Kotlin.listFunction().add("");
         Kotlin.mutableListFunction().add("");
+
+        Kotlin.getReadOnlyProperty();
+        Kotlin.getMutableProperty();
+        Kotlin.setMutableProperty(null);
     }
 }

@@ -17,6 +17,9 @@ fun mutableListFunction(): MutableList<String> {
     return mutableListOf()
 }
 
+val readOnlyProperty: String = ""
+var mutableProperty: String = ""
+
 fun main() {
     Java.voidFunction()
 
@@ -25,4 +28,9 @@ fun main() {
     Java.listFunction().add("")
     //listFunction().add("")
     mutableListFunction().add("")
+
+    Java().field
+    Java().property = ""
+    //readOnlyProperty = ""
+    mutableProperty = ""
 }
