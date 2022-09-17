@@ -1,5 +1,7 @@
 package com.cleverlance.workshop;
 
+import kotlin.coroutines.Continuation;
+import kotlin.coroutines.CoroutineContext;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
@@ -39,5 +41,40 @@ public class Java {
         Kotlin.getReadOnlyProperty();
         Kotlin.getMutableProperty();
         Kotlin.setMutableProperty(null);
+
+        Kotlin.doSomethingAsync("1", new Continuation<Integer>() {
+            @NotNull
+            @Override
+            public CoroutineContext getContext() {
+                return null;
+            }
+
+            @Override
+            public void resumeWith(@NotNull Object o) {
+                Kotlin.doSomethingAsync("2", new Continuation<Integer>() {
+                    @NotNull
+                    @Override
+                    public CoroutineContext getContext() {
+                        return null;
+                    }
+
+                    @Override
+                    public void resumeWith(@NotNull Object o) {
+                        Kotlin.doSomethingAsync("3", new Continuation<Integer>() {
+                            @NotNull
+                            @Override
+                            public CoroutineContext getContext() {
+                                return null;
+                            }
+
+                            @Override
+                            public void resumeWith(@NotNull Object o) {
+
+                            }
+                        });
+                    }
+                });
+            }
+        });
     }
 }

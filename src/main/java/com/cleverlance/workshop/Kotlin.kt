@@ -20,6 +20,10 @@ fun mutableListFunction(): MutableList<String> {
 val readOnlyProperty: String = ""
 var mutableProperty: String = ""
 
+suspend fun doSomethingAsync(input: String): Int {
+    return 0
+}
+
 fun main() {
     Java.voidFunction()
 
@@ -33,4 +37,12 @@ fun main() {
     Java().property = ""
     //readOnlyProperty = ""
     mutableProperty = ""
+
+    //doSomethingAsync("")
+}
+
+suspend fun anotherMain() {
+    doSomethingAsync("1")
+    doSomethingAsync("2")
+    doSomethingAsync("3")
 }
